@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-29 11:11+0530\n"
-"PO-Revision-Date: 2020-09-25 18:20+0000\n"
-"Last-Translator: Alvaro Figueroa <alvaro@greencore.co.cr>\n"
+"POT-Creation-Date: 2020-10-06 13:26-0400\n"
+"PO-Revision-Date: 2020-10-09 17:19+0000\n"
+"Last-Translator: dherrada <dylan.herrada@adafruit.com>\n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -278,6 +278,10 @@ msgstr "pow() con 3 argumentos no soportado"
 msgid "A hardware interrupt channel is already in use"
 msgstr "El canal EXTINT ya está siendo utilizado"
 
+#: ports/esp32s2/common-hal/analogio/AnalogIn.c
+msgid "ADC2 is being used by WiFi"
+msgstr ""
+
 #: shared-bindings/_bleio/Address.c shared-bindings/ipaddress/IPv4Address.c
 #, c-format
 msgid "Address must be %d bytes long"
@@ -347,7 +351,7 @@ msgstr "Ya está en ejecución"
 
 #: ports/esp32s2/common-hal/wifi/Radio.c
 msgid "Already scanning for wifi networks"
-msgstr ""
+msgstr "Ya se están buscando redes wifi"
 
 #: ports/cxd56/common-hal/analogio/AnalogIn.c
 msgid "AnalogIn not supported on given pin"
@@ -693,7 +697,7 @@ msgstr "No se pudo reiniciar el PWM"
 
 #: ports/esp32s2/common-hal/neopixel_write/__init__.c
 msgid "Could not retrieve clock"
-msgstr ""
+msgstr "No puedo traer el reloj"
 
 #: shared-bindings/_bleio/Adapter.c
 msgid "Could not set address"
@@ -787,7 +791,7 @@ msgstr "ECB solo opera sobre 16 bytes a la vez"
 
 #: ports/esp32s2/common-hal/busio/SPI.c
 msgid "ESP-IDF memory allocation failed"
-msgstr ""
+msgstr "Fallo ESP-IDF al tomar la memoria"
 
 #: ports/atmel-samd/common-hal/frequencyio/FrequencyIn.c
 #: ports/atmel-samd/common-hal/ps2io/Ps2.c
@@ -848,7 +852,7 @@ msgstr "FFT se define solo para ndarrays"
 
 #: ports/esp32s2/common-hal/socketpool/Socket.c
 msgid "Failed SSL handshake"
-msgstr ""
+msgstr "Fallo en saludo SSL"
 
 #: shared-bindings/ps2io/Ps2.c
 msgid "Failed sending command."
@@ -875,11 +879,11 @@ msgstr "Falló la asignación del buffer RX de %d bytes"
 
 #: ports/esp32s2/common-hal/wifi/__init__.c
 msgid "Failed to allocate Wifi memory"
-msgstr ""
+msgstr "Fallo al tomar memoria Wifi"
 
 #: ports/esp32s2/common-hal/wifi/ScannedNetworks.c
 msgid "Failed to allocate wifi scan memory"
-msgstr ""
+msgstr "Fallo al tomar memoria para búsqueda wifi"
 
 #: ports/nrf/common-hal/_bleio/Adapter.c
 msgid "Failed to connect: internal error"
@@ -891,7 +895,7 @@ msgstr "Error al conectar: tiempo de espera agotado"
 
 #: ports/esp32s2/common-hal/wifi/__init__.c
 msgid "Failed to init wifi"
-msgstr ""
+msgstr "Fallo al inicializar wifi"
 
 #: shared-module/audiomp3/MP3Decoder.c
 msgid "Failed to parse MP3 file"
@@ -1084,7 +1088,7 @@ msgstr "Formato de fragmento de formato no válido"
 
 #: ports/esp32s2/common-hal/pwmio/PWMOut.c
 msgid "Invalid frequency"
-msgstr ""
+msgstr "Frecuencia inválida"
 
 #: ports/stm/common-hal/pwmio/PWMOut.c
 msgid "Invalid frequency supplied"
@@ -1247,6 +1251,7 @@ msgid "No CCCD for this Characteristic"
 msgstr "No hay CCCD para esta característica"
 
 #: ports/atmel-samd/common-hal/analogio/AnalogOut.c
+#: ports/esp32s2/common-hal/analogio/AnalogOut.c
 #: ports/stm/common-hal/analogio/AnalogOut.c
 msgid "No DAC on chip"
 msgstr "El chip no tiene DAC"
@@ -1319,11 +1324,11 @@ msgstr "No hay soporte de entero largo"
 
 #: ports/esp32s2/common-hal/pwmio/PWMOut.c
 msgid "No more channels available"
-msgstr ""
+msgstr "No hay más canales disponibles"
 
 #: ports/esp32s2/common-hal/pwmio/PWMOut.c
 msgid "No more timers available"
-msgstr ""
+msgstr "No hay más temporizadores disponibles"
 
 #: ports/stm/common-hal/pwmio/PWMOut.c
 msgid "No more timers available on this pin."
@@ -1392,11 +1397,11 @@ msgstr "Solo mono de 8 ó 16 bit con "
 
 #: ports/esp32s2/common-hal/socketpool/SocketPool.c
 msgid "Only IPv4 SOCK_STREAM sockets supported"
-msgstr ""
+msgstr "Solo hay capacidad para enchufes IPv4 SOCK_STREAM"
 
 #: ports/esp32s2/common-hal/wifi/__init__.c
 msgid "Only IPv4 addresses supported"
-msgstr ""
+msgstr "Solo hay capacidad para direcciones IPv4"
 
 #: shared-module/displayio/OnDiskBitmap.c
 #, c-format
@@ -1421,7 +1426,7 @@ msgstr "Solo se aceptan enteros crudos para ip"
 
 #: ports/esp32s2/common-hal/socketpool/SocketPool.c
 msgid "Out of sockets"
-msgstr ""
+msgstr "Se acabaron los enchufes"
 
 #: shared-bindings/audiobusio/PDMIn.c
 msgid "Oversample must be multiple of 8."
@@ -1451,6 +1456,7 @@ msgstr "Permiso denegado"
 
 #: ports/atmel-samd/common-hal/analogio/AnalogIn.c
 #: ports/cxd56/common-hal/analogio/AnalogIn.c
+#: ports/esp32s2/common-hal/analogio/AnalogIn.c
 #: ports/mimxrt10xx/common-hal/analogio/AnalogIn.c
 #: ports/nrf/common-hal/analogio/AnalogIn.c
 #: ports/stm/common-hal/analogio/AnalogIn.c
@@ -1492,6 +1498,8 @@ msgid ""
 "Port does not accept PWM carrier. Pass a pin, frequency and duty cycle "
 "instead"
 msgstr ""
+"Port no acepta un carrier de PWM. Pase en cambio un pin, una frecuencia o un "
+"ciclo de actividad"
 
 #: ports/atmel-samd/common-hal/pulseio/PulseOut.c
 #: ports/cxd56/common-hal/pulseio/PulseOut.c
@@ -1564,6 +1572,10 @@ msgstr "Objeto de solo-lectura"
 #: shared-bindings/displayio/EPaperDisplay.c
 msgid "Refresh too soon"
 msgstr "Actualizando demasiado pronto"
+
+#: shared-bindings/canio/RemoteTransmissionRequest.c
+msgid "RemoteTransmissionRequests limited to 8 bytes"
+msgstr "RemoteTransmissionRequests limitado a 8 bytes"
 
 #: shared-bindings/aesio/aes.c
 msgid "Requested AES mode is unsupported"
@@ -1655,7 +1667,7 @@ msgstr "Rebanadas no soportadas"
 
 #: ports/esp32s2/common-hal/socketpool/SocketPool.c
 msgid "SocketPool can only be used with wifi.radio"
-msgstr ""
+msgstr "SocketPool solo se puede usar con wifi.radio"
 
 #: shared-bindings/aesio/aes.c
 msgid "Source and destination buffers must be the same length"
@@ -1700,6 +1712,10 @@ msgid ""
 msgstr ""
 "El módulo de `microcontroller` fue utilizado para bootear en modo seguro. "
 "Presione reset para salir del modo seguro.\n"
+
+#: shared-bindings/rgbmatrix/RGBMatrix.c
+msgid "The length of rgb_pins must be 6, 12, 18, 24, or 30"
+msgstr "La longitud de rgb_pins debe ser 6, 12, 18, 24, o 30"
 
 #: supervisor/shared/safe_mode.c
 msgid ""
@@ -1835,7 +1851,7 @@ msgstr "No se pudieron asignar buffers para la conversión con signo"
 
 #: ports/esp32s2/common-hal/busio/I2C.c
 msgid "Unable to create lock"
-msgstr ""
+msgstr "No se puede crear bloqueo"
 
 #: shared-module/displayio/I2CDisplay.c
 #, c-format
@@ -1866,7 +1882,7 @@ msgstr "Tipo de uuid nrfx inesperado"
 #: ports/esp32s2/common-hal/socketpool/Socket.c
 #, c-format
 msgid "Unhandled ESP TLS error %d %d %x %d"
-msgstr ""
+msgstr "Error no manejado de ESP TLS %d %d %x %d"
 
 #: shared-bindings/wifi/Radio.c
 msgid "Unknown failure"
@@ -2479,9 +2495,13 @@ msgstr "error = 0x%08lX"
 msgid "exceptions must derive from BaseException"
 msgstr "las excepciones deben derivar de BaseException"
 
-#: shared-bindings/canio/CAN.c shared-bindings/canio/Listener.c
+#: shared-bindings/canio/CAN.c
 msgid "expected '%q' but got '%q'"
 msgstr "se espera '%q' pero se recibe '%q'"
+
+#: shared-bindings/canio/CAN.c
+msgid "expected '%q' or '%q' but got '%q'"
+msgstr "se espera '%q' o '%q' pero se recibe '%q'"
 
 #: py/objstr.c
 msgid "expected ':' after format specifier"
@@ -3205,6 +3225,7 @@ msgstr "el 3er argumento de pow() no puede ser 0"
 msgid "pow() with 3 arguments requires integers"
 msgstr "pow() con 3 argumentos requiere enteros"
 
+#: ports/esp32s2/boards/adafruit_metro_esp32s2/mpconfigboard.h
 #: ports/esp32s2/boards/electroniccats_bastwifi/mpconfigboard.h
 #: ports/esp32s2/boards/espressif_kaluga_1/mpconfigboard.h
 #: ports/esp32s2/boards/espressif_saola_1_wroom/mpconfigboard.h
@@ -3212,8 +3233,9 @@ msgstr "pow() con 3 argumentos requiere enteros"
 #: ports/esp32s2/boards/microdev_micro_s2/mpconfigboard.h
 #: ports/esp32s2/boards/muselab_nanoesp32_s2/mpconfigboard.h
 #: ports/esp32s2/boards/unexpectedmaker_feathers2/mpconfigboard.h
+#: ports/esp32s2/boards/unexpectedmaker_feathers2_prerelease/mpconfigboard.h
 msgid "pressing boot button at start up.\n"
-msgstr ""
+msgstr "presionando botón de arranque al inicio.\n"
 
 #: ports/atmel-samd/boards/circuitplayground_express/mpconfigboard.h
 #: ports/atmel-samd/boards/circuitplayground_express_crickit/mpconfigboard.h
@@ -3221,7 +3243,7 @@ msgstr ""
 #: ports/atmel-samd/boards/escornabot_makech/mpconfigboard.h
 #: ports/atmel-samd/boards/meowmeow/mpconfigboard.h
 msgid "pressing both buttons at start up.\n"
-msgstr ""
+msgstr "presionando ambos botones al inicio.\n"
 
 #: extmod/modutimeq.c
 msgid "queue overflow"
@@ -3349,10 +3371,6 @@ msgstr "sosfilt requiere argumentos iterables"
 #: shared-bindings/displayio/Bitmap.c
 msgid "source palette too large"
 msgstr "paleta fuente muy larga"
-
-#: shared-bindings/canio/Message.c
-msgid "specify size or data, but not both"
-msgstr "especifique o tamaño o datos, pero no ambos"
 
 #: py/objstr.c
 msgid "start/end indices"
@@ -3592,6 +3610,10 @@ msgstr "los vectores deben tener el mismo tamaño"
 msgid "watchdog timeout must be greater than 0"
 msgstr "el tiempo de espera del perro guardián debe ser mayor a 0"
 
+#: shared-bindings/rgbmatrix/RGBMatrix.c
+msgid "width must be greater than zero"
+msgstr "el ancho debe ser mayor que cero"
+
 #: shared-bindings/_bleio/Adapter.c
 msgid "window must be <= interval"
 msgstr "la ventana debe ser <= intervalo"
@@ -3651,6 +3673,9 @@ msgstr "zi debe ser de tipo flotante"
 #: extmod/ulab/code/filter/filter.c
 msgid "zi must be of shape (n_section, 2)"
 msgstr "zi debe ser una forma (n_section,2)"
+
+#~ msgid "specify size or data, but not both"
+#~ msgstr "especifique o tamaño o datos, pero no ambos"
 
 #~ msgid "Must provide SCK pin"
 #~ msgstr "Debes proveer un pin para SCK"

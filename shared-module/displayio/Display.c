@@ -107,8 +107,6 @@ void common_hal_displayio_display_construct(displayio_display_obj_t* self,
         i += 2 + data_size;
     }
 
-    supervisor_start_terminal(width, height);
-
     // Always set the backlight type in case we're reusing memory.
     self->backlight_inout.base.type = &mp_type_NoneType;
     if (backlight_pin != NULL && common_hal_mcu_pin_is_free(backlight_pin)) {
@@ -328,11 +326,10 @@ STATIC bool _refresh_area(displayio_display_obj_t* self, const displayio_area_t*
 }
 
 STATIC void _refresh_display(displayio_display_obj_t* self) {
-    if (!displayio_display_core_bus_free(&self->core)) {
-        // Can't acquire display bus; skip updating this display. Try next display.
+    if (!displayio_display_core_start_refresh(&self->core)) {
+        // A refresh on this bus is already in progress.  Try next display.
         return;
     }
-    displayio_display_core_start_refresh(&self->core);
     const displayio_area_t* current_area = _get_refresh_areas(self);
     while (current_area != NULL) {
         _refresh_area(self, current_area);
